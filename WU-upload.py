@@ -85,4 +85,10 @@ r= requests.get(
     action_str)
 
 # print("Received " + str(r.status_code) + " " + str(r.text))
-print(pressure_str)
+print("Pressure is:",pressure_str)
+print("Temp is:",ambient_temp_str)
+print("Humidity is:",humidity_str)
+print("Wind speed is:",wind_speed_str)
+print("Wind gust is:",wind_gust_str)
+print("Rain is:",rainfall_str)
+print("Wind Average is:",wind_average_str)
