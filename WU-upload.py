@@ -84,7 +84,7 @@ r= requests.get(
     "&winddir=" + wind_average_str +
     action_str)
 
-# print("Received " + str(r.status_code) + " " + str(r.text))
+print("Received " + str(r.status_code) + " " + str(r.text))
 print("Pressure is:",pressure_str)
 print("Temp is:",ambient_temp_str)
 print("Humidity is:",humidity_str)
