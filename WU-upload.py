@@ -1,5 +1,5 @@
 import interrupt_client, MCP342X, wind_direction, HTU21D, bmp085, tgs2600, ds18b20_therm
-import database 
+import database, mysql
 import requests
 
 pressure = bmp085.BMP085()
