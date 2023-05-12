@@ -84,4 +84,5 @@ r= requests.get(
     "&winddir=" + wind_average_str +
     action_str)
 
-print("Received " + str(r.status_code) + " " + str(r.text))
+# print("Received " + str(r.status_code) + " " + str(r.text))
+print(pressure_str)
