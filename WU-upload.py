@@ -1,6 +1,7 @@
 import interrupt_client, MCP342X, wind_direction, HTU21D, bmp085, tgs2600, ds18b20_therm
 import database
 import requests
+import config
 
 pressure = bmp085.BMP085()
 temp_probe = ds18b20_therm.DS18B20()
@@ -57,7 +58,7 @@ def kmh_to_mph(kmh):
 WUurl = "https://weatherstation.wunderground.com/weatherstation\
 /updateweatherstation.php?"
 stationID = "ISOWER8"
-stationKey = "mYkwha6B"
+stationKey = config.password
 WUcreds = "ID=" + stationID + "&PASSWORD="+ stationKey
 date_str = "&dateutc=now"
 action_str = "&action=updateraw"
