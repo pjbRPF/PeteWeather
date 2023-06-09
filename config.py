@@ -1,1 +1,2 @@
-password = "mYkwha6B"
+stationKey = "mYkwha6B"
+stationID = "ISOWER8"
