@@ -57,9 +57,7 @@ def kmh_to_mph(kmh):
 # create a string to hold the first part of the URL
 WUurl = "https://weatherstation.wunderground.com/weatherstation\
 /updateweatherstation.php?"
-stationID = "ISOWER8"
-stationKey = config.password
-WUcreds = "ID=" + stationID + "&PASSWORD="+ stationKey
+WUcreds = "ID=" + config.stationID + "&PASSWORD="+ config.stationKey
 date_str = "&dateutc=now"
 action_str = "&action=updateraw"
 
