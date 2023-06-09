@@ -1,5 +1,4 @@
 import interrupt_client, MCP342X, wind_direction, HTU21D, bmp085, tgs2600, ds18b20_therm
-import database
 import requests
 import config
 
@@ -9,7 +8,6 @@ air_qual = tgs2600.TGS2600(adc_channel = 0)
 humidity = HTU21D.HTU21D()
 wind_dir = wind_direction.wind_direction(adc_channel = 0, config_file="wind_direction.json")
 interrupts = interrupt_client.interrupt_client(port = 49501)
-#db = database.weather_database() #Local MySQL db
 
 wind_average = wind_dir.get_value(10) #ten seconds
 ambient_temp = humidity.read_temperature()
@@ -20,11 +18,6 @@ humidity = humidity.read_humidity()
 wind_speed = interrupts.get_wind()
 wind_gust = interrupts.get_wind_gust()
 rainfall = interrupts.get_rain()
-
-#print("Inserting...")
-#db.insert(ambient_temp, ground_temp, air_quality, pressure, humidity, wind_average, wind_speed, wind_gust, rainfall)
-#print("done")
-
 interrupts.reset()
 
 # Conversion functions
